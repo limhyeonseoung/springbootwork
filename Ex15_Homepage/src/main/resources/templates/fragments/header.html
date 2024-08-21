@@ -3,8 +3,9 @@
 <body>
 	<div th:fragment="fragment-menu">
 		<h1 align="center">SpringBoot HomePage</h1>
+		<!-- 로그인 전 -->
 		<div th:if="${loginUser == null}" align="right">
-			<form>
+			<form action="login" method="post">
 				<table>
 					<tr>
 						<td>아이디</td>
@@ -26,16 +27,17 @@
 			</form>			
 		</div>
 		
+		<!-- 로그인 후 -->
 		<div th:if="${loginUser != null}" align="right">
 			<table>
 				<tr>
-					<td colspan="2" >
-						<h4 th:text="${loginUser.name} + 님 환영합니다"></h4>						
+					<td colspan="2" >						
+						 <h4>[[${loginUser.name}]]님 환영합니다</h4>
 					</td>
 				</tr>
 				<tr>
 					<td width="90"><a href="">마이페이지</a></td>
-					<td><a href="">로그아웃</a></td>
+					<td><a href="logout">로그아웃</a></td>
 				</tr>
 			</table>
 		</div>
@@ -46,10 +48,10 @@
 			<tr>
 				<td>HOME</td>
 				<td>공지사항</td>
-				<td>게시판</td>
+				<td onclick="location.href='list'">게시판</td>
 				<td>찾아오는길</td>
 			</tr>
 		</table>
 	</div>
 </body>
-</html>
+</html>s

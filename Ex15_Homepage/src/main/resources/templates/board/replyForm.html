@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="css/index.css" rel="stylesheet"/>
+<link href="css/boardList.css" rel="stylesheet"/>
+</head>
+<style>
+    table {
+      
+         margin: 0 auto;
+    }
+    #t1 {
+        
+    }
+    #t2{
+       
+    }
+    textarea {
+        width: 400px;
+        height: 600px;
+    }
+</style>
+<body>
+	<div th:replace="~{/fragments/header.html :: fragment-menu}"></div>
+	<h1 align="center">댓글 쓰기</h1>
+	<form action="reply">
+		<div>
+			<table>
+                <tr>
+                    <td id="t1">작성자</td>
+                    <td id="t2">ddd</td>
+                </tr>
+                <tr>
+                    <td>내용</td>
+                    <td><textarea name="" id=""></textarea></td>
+                </tr>
+            </table>
+		</div>
+	</form>
+</body>
+</html>
